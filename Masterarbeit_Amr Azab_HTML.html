@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Master Thesis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #FFFFFF; /* Set white background color */
+            color: #000000; /* Set black text color */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Set the body to at least the full height of the viewport */
+        }
+
+        header {
+            background-color: #000000;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+        }
+
+        nav {
+            float: left; /* Move the menu to the left side */
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 0 15px; /* Increase the space between menu items */
+            font-size: 18px; /* Increase the font size of the menu items */
+        }
+
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 585px;
+        }
+
+        td {
+            padding: 5px;
+            vertical-align: middle;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        hr {
+            border: 1px solid #FFFFFF; /* Set white border color */
+        }
+
+        /* Styling for the header section */
+        h1 {
+            margin: 0; /* Remove default margin for h1 */
+            color: #FFFFFF; /* Set header text color to white */
+        }
+
+        /* Styling for the main content section */
+        h2:first-child {
+            font-size: 24px;
+            margin-top: 70px; /* Add a margin of 70px to the top */
+        }
+
+        h2:nth-child(3) {
+            font-size: 20px;
+        }
+
+        /* Styling for the footer section */
+        h2:last-child {
+            font-size: 16px;
+        }
+
+        /* Hyperlink styles */
+        a:link,
+        a:visited {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #800080;
+        }
+
+        a:active {
+            color: #FF0000;
+        }
+
+        main {
+            flex: 1; /* Allow main content to take up remaining vertical space */
+            scroll-behavior: smooth; /* Add smooth scrolling for anchor tags */
+            margin-left: 70px; /* Align the main text to the left with 70px margin from the left side */
+        }
+
+        /* Styling for the anchor tags in the main content section */
+        h2[id]::before {
+            content: "";
+            display: block;
+            height: 80px; /* Height of the fixed header */
+            margin-top: -80px; /* Offset to account for the fixed header */
+            visibility: hidden;
+        }
+
+        footer {
+            background-color: #000000;
+            padding: 10px;
+            text-align: left;
+            color: #FFFFFF; /* Set footer text color to white */
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        /* Add footer position for WiSe 2023 / 2024 */
+        .footer-position {
+            position: absolute;
+            bottom: 10px;
+            right: 40px; /* Adjust the right margin to move the text to the left */
+        }
+
+        /* Add margin for "Abschlussarbeit von Amr Azab" */
+        .abschlussarbeit {
+            margin-top: 100px; /* Add margin to move it down */
+        }
+
+        /* Add styles to align the main text to the left */
+        .main-content {
+            text-align: left;
+            margin-left: 70px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>MasterArbeit</h1> <!-- Add Masterarbeit in the header on the left side -->
+        <nav>
+            <a href="#">Home</a> <!-- Use href="#" to scroll back to the top of the page -->
+            <a href="#introduction">Introduction</a>
+            <a href="#problem">Problem</a>
+            <a href="#results">Results</a>
+            <a href="#kontakt">Kontakt</a> <!-- Add Kontakt in the header menu -->
+            <!-- Add more links as needed -->
+        </nav>
+    </header>
+
+    <main>
+        <table border="0" cellspacing="0" cellpadding="5" width="585">
+            <tr>
+                <td valign="CENTER" width="98%">
+                    <hr ALIGN="LEFT">
+                    <h2 class="abschlussarbeit">Abschlussarbeit von Amr Azab</h2>
+                    <p style="font-size: 60px;"><b>Modellierung technischer Bestandsbauwerke aus 3D-Punktwolken</b></p>
+                    <p><b>Betreuer:</b> Prof. Dr.-Ing. Martin Schlueter</p>
+                    <p><b>Bearbeitungs-Zeitraum:</b> 08.2023 - 02.2024</p>
+                    <p>Hochschule Mainz – Studiengang Geoinformatik (M.Eng.)</p>
+                </td>
+                <td valign="CENTER" width="2%">&nbsp;</td>
+            </tr>
+            <tr>
+                <td valign="CENTER" width="98%" colspan="2" class="main-content">
+                    <h2 id="introduction"><hr ALIGN="LEFT">Problemstellung</h2>
+                    <font color="#000000">... Max. 2 Absätze, warum die Abschlussarbeit durchgeführt wurde ...</font>
+                    <h2 id="problem"><hr ALIGN="LEFT">Zielsetzung</h2>
+                    <font color="#000000">In dieser These stellen wir eine Methode vor, wie Brücken mithilfe des Mobile Mapping Systems mit VLX2 und TIMMS erkannt und modelliert werden können. Wir werden das Programm Revit und Leica Cyclone verwenden, um die Punktwolke zu bearbeiten und den Plan auszuschneiden, um die Daten zu reduzieren und zu verkleinern. Anschließend verwenden wir die automatische Klassifizierung, um andere Objekte, wie Gebäude, Bäume, Vegetation und Stromleitungen, mithilfe der in Kapitel 3 vorgeschlagenen Methode zu entfernen. Das Problem besteht darin, dass immer noch einige Störungen um die Brücke herum auftreten. Nach der Entfernung der Störungen und der Segmentierung werden diese Brücken jedoch mit dem Archicad oder Dynamo-Programm modelliert.</font>
+                    <h2 id="results"><hr ALIGN="LEFT">Ergebnisse der Arbeit</h2>
+                    <font color="#000000">... Minimale Variante: Zwei Absätze, einige Bullets und ein oder zwei aussagekräftige Bilder ...</font>
+                    <p><font color="#000000">... Erweiterte Version: Bei guten HTML-Kenntnissen können die Ergebnisse ausführlicher dargestellt werden, ggf. mit Hyperlinks innerhalb eines Dokuments oder weiteren Inhalten in zusätzlichen Dateien. ...</font>
+                    <p><font color="#000000"><i>Bei dem letzten Punkt ist es wichtig, dass keine Hyperlinks nach außen referenziert werden und nicht auf Dokumente im studentischen Verzeichnis verwiesen wird. Alle benötigten Dateien werden abgegeben.</i></font>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>Phone: +49 176 41111865</p>
+        <p>Email: amr.azab1993@gmail.com</p>
+        <p>Follow me: <a href="https://www.linkedin.com/in/amrazab1993/">LinkedIn</a></p>
+        <p class="footer-position">WiSe 2023 / 2024</p> <!-- Add WiSe 2023 / 2024 in the bottom right -->
+    </footer>
+</body>
+</html>
